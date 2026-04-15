@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="dist/assets/favicon-jcMOq34Z.svg" width="80" height="80" alt="OneTap Logo" />
+<img src="public/logo.svg" width="80" height="80" alt="OneTap Logo" />
 
 # OneTap — Smart NFC Business Cards
 
