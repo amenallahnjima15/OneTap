@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Brand gradient -->
+    <linearGradient id="mintGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5cfad5"></stop>
+      <stop offset="100%" stop-color="#00d28b"></stop>
+    </linearGradient>
+
+    <!-- Inner glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100" height="100" rx="24" fill="#0f172a"></rect>
+
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="28" fill="none" stroke="url(#mintGrad)" stroke-width="6" opacity="0.9"></circle>
+
+  <!-- Main O -->
+  <circle cx="50" cy="50" r="22" fill="none" stroke="url(#mintGrad)" stroke-width="8" filter="url(#glow)"></circle>
+
+  <!-- Pulse -->
+  <circle cx="50" cy="50" r="10" fill="#00d28b" opacity="0.15">
+    <animate attributeName="r" from="8" to="22" dur="1.8s" repeatCount="indefinite"></animate>
+    <animate attributeName="opacity" from="0.25" to="0" dur="1.8s" repeatCount="indefinite"></animate>
+  </circle>
+
+  <!-- Tap dot -->
+  <circle cx="70" cy="30" r="5.5" fill="#00d28b"></circle>
+</svg>
